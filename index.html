@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<script language="JavaScript">
+    function bt_click(){ 
+        value=$("#input").val();
+        time=new Date().toLocaleTimeString();
+
+        $("#p").append(time+" You>"+value+"<br>");
+        if(value=="こんにちは"){
+        	$("#p").append(time+" Bot>こんにちは。<br>");
+        }
+        if(value=="いま何時？"){
+        	$("#p").append(time+" Bot>"+time+"<br>");
+        }
+        if(value=="今日の東京の天気は？"){
+        	$("#p").append(time+" Bot>晴れです。<br>");
+        }
+        $("#input").val("");
+    }
+</script>
+<p><input id="input" name="input"> <button onClick="bt_click()">送信</button><p>
+
+<p id="p"></p>
+</body>
+</html>
